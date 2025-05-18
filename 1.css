@@ -1,0 +1,55 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{   
+ height: 100vh;
+ background-image: radial-gradient(rgb(87, 13, 87), rgb(5, 5, 63), rgb(0, 0, 0)); 
+ overflow: hidden;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: relative;  
+}
+body::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+}
+.heart-container
+{
+    filter: drop-shadow(0 0 15px #0400ff);
+    font-size: 120px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.heart
+{
+    color: black;
+    text-shadow: 
+    0 0 8px #8604b6
+    0 0 15px #d8ff4d
+    0 0 25px #ff4d4d
+    0 0 40px #4de7ff;
+}
+.heart-container:hover
+{
+    transform: scale(1.1) rotate(2deg);
+    filter: drop-shadow(0 0 30px #fb00ff)hue-rotate(45deg);
+}
+@keyframes pulse
+{
+    0%, 100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
